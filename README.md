@@ -7,7 +7,8 @@
 
 ### Respuesta 1
 
-> Query para obtener el id y nombre del vendedor, el total vendido por productos y el total vendido por experiencias, agrupado por nombre y id de los proveedores
+> Query para obtener el id y nombre del vendedor, el total vendido por productos y el total vendido por experiencias (filtrado por el mes actual), agrupado por nombre y id de los proveedores.
+
 
 <pre>
     <code>
@@ -22,6 +23,8 @@
                                 paquete
                             WHERE
                                 item_id = i.id
+                                AND MONTH(created) = MONTH(CURRENT_DATE())
+                                AND YEAR(created) = YEAR(CURRENT_DATE())
                             LIMIT 1)
                     THEN
                         (t.total * i.cantidad)
@@ -36,6 +39,8 @@
                                 entrada
                             WHERE
                                 item_id = i.id
+                                AND MONTH(created) = MONTH(CURRENT_DATE())
+                                AND YEAR(created) = YEAR(CURRENT_DATE())
                             LIMIT 1)
                     THEN
                         (t.total * i.cantidad)
