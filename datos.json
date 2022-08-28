@@ -1,0 +1,28 @@
+{
+    "datos":[
+        {
+            "id": 1,
+            "nombre": "proveedor_muebles",
+            "total_productos": 180000,
+            "total_experiencia": 235000
+        },
+        {
+            "id": 2,
+            "nombre": "proveedor_oficina",
+            "total_productos": 36800,
+            "total_experiencia": 0
+        },
+        {
+            "id": 3,
+            "nombre": "proveedor_computadores",
+            "total_productos": 1850000,
+            "total_experiencia": 200000
+        },
+        {
+            "id": 4,
+            "nombre": "proveedor_celulares",
+            "total_productos": 1425000,
+            "total_experiencia": 300000
+        }
+    ]
+}
